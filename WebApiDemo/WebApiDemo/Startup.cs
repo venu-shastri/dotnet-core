@@ -28,6 +28,8 @@ namespace WebApiDemo
             services.AddControllers();
             //Once instance of type PatientMemoryDBRepository created - Any number of Resolve request
             services.AddSingleton<Repository.IPatientDataRepository, Repository.PatientMemoryDBRepository>();
+
+            services.AddTransient<Utility.ITransactionManager, Utility.TransactionManager>();
             //One instace/ Request
             //services.AddTransient<Repository.IPatientDataRepository, Repository.PatientMemoryDBRepository>();
 

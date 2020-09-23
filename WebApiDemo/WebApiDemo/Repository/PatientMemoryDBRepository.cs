@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiDemo.Models;
+using WebApiDemo.Utility;
 
 namespace WebApiDemo.Repository
 {
@@ -10,8 +11,10 @@ namespace WebApiDemo.Repository
     {
          List<Models.PatientDataModel> _db = new List<PatientDataModel>();
 
+       // ITransactionManager _tranx;
         public PatientMemoryDBRepository()
         {
+            
             _db.Add(new PatientDataModel {  
                 MRN="MRN001", 
                 Name="Tom",
@@ -41,17 +44,18 @@ namespace WebApiDemo.Repository
             }
             );
         } 
-        public void AddNewPatient(PatientDataModel newState)
+        public void AddNewPatient(PatientDataModel newState,ITransactionManager manager)
         {
+            manager.GetTransaction();
             _db.Add(newState);
         }
 
-        public IEnumerable<PatientDataModel> GetAllPatients()
+        public IEnumerable<PatientDataModel> GetAllPatients(ITransactionManager manager)
         {
             return _db;
         }
 
-        public void Remove(string mrn)
+        public void Remove(string mrn,ITransactionManager manager)
         {
            for(int i = 0; i < _db.Count; i++)
             {
@@ -63,7 +67,7 @@ namespace WebApiDemo.Repository
             }
         }
 
-        public void UpdatePatientInfo(string mrn, PatientDataModel state)
+        public void UpdatePatientInfo(string mrn, PatientDataModel state, ITransactionManager manager)
         {
 
             for (int i = 0; i < _db.Count; i++)
