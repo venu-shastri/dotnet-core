@@ -3,9 +3,40 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script>
+        // scope {searchKey:"" , httpReq:"" , this:""}
+        
+        function onSearchButtonClick() {
+
+            var searchKey = window.document.getElementById('searchIdTextBox').value;
+            //AJAX Request - Asynchronous Http Request;
+           var   httpReq = new XMLHttpRequest();
+            httpReq.open("GET", "http://localhost:60349/patients/PatientData/GetPatientByMrn/" + searchKey, true);
+            //registering callback - to get updates on status of http request
+            httpReq.onreadystatechange = function () {
+                console.log("callback");
+                if (httpReq.readyState == 4) {
+
+                    var liTag = document.createElement("li");
+                    liTag.innerText = httpReq.responseText;
+                    document.getElementById("resultDashboard").appendChild(liTag);
+                }
+
+            }
+            httpReq.send();
+            
+        }
+      
+    </script>
 </head>
 <body>
 
     <h1>Content From index.html</h1>
+    <p>Enter MRN</p>
+    <input type="text" id="searchIdTextBox" /> <br/>
+    <button onclick="onSearchButtonClick()">Search</button>
+    <ul id="resultDashboard">
+
+    </ul>
 </body>
 </html>

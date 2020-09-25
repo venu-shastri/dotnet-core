@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp.csproj": {}
+    "D:\\knowledge\\dotnet-bootcamp-core\\dotnet-core\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp.csproj": {
+    "D:\\knowledge\\dotnet-bootcamp-core\\dotnet-core\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp.csproj",
+        "projectUniqueName": "D:\\knowledge\\dotnet-bootcamp-core\\dotnet-core\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp.csproj",
         "projectName": "PatientDataSeviceWebApp",
-        "projectPath": "C:\\Users\\user\\source\\repos\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp.csproj",
+        "projectPath": "D:\\knowledge\\dotnet-bootcamp-core\\dotnet-core\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\obj\\",
+        "outputPath": "D:\\knowledge\\dotnet-bootcamp-core\\dotnet-core\\PatientDataSeviceWebApp\\PatientDataSeviceWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
